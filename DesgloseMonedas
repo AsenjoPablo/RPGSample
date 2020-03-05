@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DesgloseMonedasArray08 {
+public class DesgloseMonedas {
 
 	public static void main ( String [] args ) {
 		
