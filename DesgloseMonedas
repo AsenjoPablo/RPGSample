@@ -1,4 +1,3 @@
-package tema4.Ejercicios;
 import java.util.Scanner;
 
 public class DesgloseMonedasArray08 {
