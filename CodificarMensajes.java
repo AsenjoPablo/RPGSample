@@ -1,4 +1,3 @@
-package finalJava;
 import java.util.Scanner;
 
 public class CodificarMensajes {
