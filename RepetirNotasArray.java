@@ -1,7 +1,6 @@
-package tema4.Ejercicios;
 import java.util.Scanner;
 
-public class RepetirNotasArray07 {
+public class RepetirNotasArray {
 
 	public static void main (String [] args) {
 		
