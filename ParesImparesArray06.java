@@ -1,6 +1,4 @@
-package tema4.Ejercicios;
-
-public class ParesImparesArray06 {
+public class ParesImparesArray {
 
 	
 	public static void main (String[] args) {
