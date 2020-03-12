@@ -84,7 +84,7 @@ public class Event {
 	
 	private static void Roll (Character user, Character target) {
 		
-		int roll = (int) (Math.random()*10);
+		int roll = (int) (Math.random()*10 + user.luck);
 		
 		if (roll >=9) {
 			CriticalAttack (user, target);
@@ -108,7 +108,7 @@ public class Event {
 	
 	private static void CriticalAttack(Character user, Character target) {
 		
-		int damage = (int) ((Math.random() * 20) + (user.strength * 2));
+		int damage = (int) (((Math.random() * 20) + 15) * 2);
 		
 		System.out.println("CRITICAL ATTACK!!!!!!!!!!");
 		System.out.println(user.getName() + " attacked " + target.getName() + " for " + damage);
@@ -169,7 +169,7 @@ public class Event {
 
 	public static void ExpGain(Character user, Character enemy) {
 		
-		int expGain = (int) ((Math.random() + enemy.maxHP*2));
+		int expGain = (int) ((Math.random() + enemy.maxHP + 30));
 		
 		System.out.println("You gained " + expGain + " points of experience");
 		System.out.println("");
@@ -187,18 +187,24 @@ public class Event {
 		//USER boost
 		user.exp = 0;
 		user.level += 1;
-		user.maxHP += (int) (Math.random() * (user.maxHP / 2)) + 25;
-		user.strength += (int) (Math.random() * user.strength) + 10;
+		user.maxHP += (int) (Math.random() * 50) + 25;
+		user.strength += (int) (Math.random() * 15) + 10;
+		user.intel += (int) (Math.random() * 15) + 10;
+		user.luck += (int) (Math.random() * 2);
 		
 		//ENEMY boost
-		enemy.maxHP += (int) (Math.random() * enemy.maxHP) + 25;
+		enemy.maxHP += (int) (Math.random() * 100) + 25;
 		enemy.charHP = enemy.maxHP; //this heals up enemy
-		enemy.strength += (int) (Math.random() * enemy.strength) + 7;
+		enemy.strength += (int) (Math.random() * 15) + 10;
+		enemy.intel += (int) (Math.random() * 15) + 10;
 
-		System.out.println("!*!*!*!*!*!*!*!*!*!*!*!*!");
-		System.out.println("Level up!");
-		System.out.println("!*!*!*!*!*!*!*!*!*!*!*!*!");
-		System.out.println("");		
+		System.out.println("Level up!!!");
+		System.out.println("-----------");
+		System.out.println("Stats");
+		System.out.println("Max HP: " + user.maxHP);
+		System.out.println("Strength: " + user.strength);
+		System.out.println("Intel: " + user.intel);
+		System.out.println("Luck: " + user.luck);
 		System.out.println("New level: " + user.level);
 		
 	}
@@ -213,6 +219,7 @@ public class Event {
 
 	public static void LeaveGame() {
 		System.out.println("Leaving the game...");
+		System.out.println("Disconnected");
 	} 
 
 	

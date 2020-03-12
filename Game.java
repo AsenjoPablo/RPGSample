@@ -9,11 +9,11 @@ public class Game {
 			//setting HP for character
 			int HPMax = (int) (Math.random() * (100) + 50);
 			int HP = HPMax;
-			int strength = (int) (Math.random() * (15) + 5);
+			int strength = (int) (Math.random() * (20) + 5);
 			Character.strengthIndicator(HPMax, strength);
 			
 			//char creation
-			Character myChar = new Character (name, HP, HPMax, strength, 0, 1, 20);			
+			Character myChar = new Character (name, HP, HPMax, strength, 0, 1, 20, 1);			
 	
 			//battle simulation
 			System.out.println("");

@@ -9,9 +9,10 @@ public class Character {
 	int level;
 	int strength;
 	int intel;
+	int luck;
 	
 	//constructor
-	public Character (String name, int HP, int HPMax, int strength, int exp, int level, int intel) {
+	public Character (String name, int HP, int HPMax, int strength, int exp, int level, int intel, int luck) {
 		this.charName = name;
 		this.charHP = HP;
 		this.maxHP = HPMax;
@@ -19,6 +20,7 @@ public class Character {
 		this.exp = exp;
 		this.level = level;
 		this.intel = intel;
+		this.luck = luck;
 	}
 	
 	
@@ -87,7 +89,7 @@ public class Character {
 		HP = HPMax;
 		strength = (int) (Math.random() * (10));
 		
-		Character goblin = new Character ("Goblin", HP, HPMax, strength, 1, 1, 5);
+		Character goblin = new Character ("Goblin", HP, HPMax, strength, 1, 1, 5, 0);
 		
 		return goblin;
 		
@@ -100,7 +102,7 @@ public class Character {
 		int HP = HPMax;
 		int strength = (int) (Math.random() + 50);
 		
-		Character goblin = new Character ("Superior Goblin", HP, HPMax, strength, 1, 1, 15);
+		Character goblin = new Character ("Superior Goblin", HP, HPMax, strength, 1, 1, 15, -2);
 		
 		return goblin;
 		
