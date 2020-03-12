@@ -1,4 +1,4 @@
-# thevault
+# Oh no, Goblins!!
 
 In this short RPG demo, you'll generate a character and fight two kinds of enemies.
 
